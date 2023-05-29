@@ -1,0 +1,85 @@
+"error and to disable the tunnel"{
+    "cloudType": "AWS",
+    "connMatrix": [
+        {
+            "srcType": "vpn",
+            "srcId": "10",
+            "destType": "tag",
+            "destId": "Tag-TenantA-USwest-1",
+            "conn": "disabled",
+            "mapped": [
+                {
+                    "srcType": "vpn",
+                    "srcId": "10",
+                    "tunnelId": "C8K-F2868057-3698-883F-4EAF-539A0AC45765::10-NA-NA-0",
+                    "sourceRegion": "us-west-1",
+                    "destType": "vpc",
+                    "destId": "vpc-05f02416339998b9e",
+                    "destTag": "Tag-TenantA-USwest-1",
+                    "destRegion": "us-west-1",
+                    "cloudType": "AWS"
+                },
+                {
+                    "srcType": "vpn",
+                    "srcId": "10",
+                    "tunnelId": "C8K-3E10D14F-E6E0-60D4-96BE-72E7EA413301::10-NA-NA-0",
+                    "sourceRegion": "us-west-1",
+                    "destType": "vpc",
+                    "destId": "vpc-05f02416339998b9e",
+                    "destTag": "Tag-TenantA-USwest-1",
+                    "destRegion": "us-west-1",
+                    "cloudType": "AWS"
+                }
+            ],
+            "unmapped": [],
+            "outstandingMapping": []
+        },
+        {
+            "srcType": "tag",
+            "srcId": "Tag-TenantA-USwest-1",
+            "destType": "vpn",
+            "destId": "10",
+            "conn": "disabled"
+        }
+    ]
+}
+
+
+{
+    "cloudType": "AWS",
+    "connMatrix": [
+        {
+            "srcType": "vpn",
+            "srcId": "10",
+            "destType": "tag",
+            "destId": "Tag-TenantB-USwest-1",
+            "conn": "enabled"
+        },
+        {
+            "srcType": "tag",
+            "srcId": "Tag-TenantB-USwest-1",
+            "destType": "vpn",
+            "destId": "10",
+            "conn": "enabled"
+        }
+    ]
+}
+{
+    "cloudType": "AWS",
+    "connMatrix": [
+        {
+            "srcType": "vpn",
+            "srcId": "10",
+            "destType": "tag",
+            "destId": "Tag-TenantB-USwest-1",
+            "conn": "enabled"
+        },
+        {
+            "srcType": "tag",
+            "srcId": "Tag-TenantB-USwest-1",
+            "destType": "vpn",
+            "destId": "10",
+            "conn": "enabled"
+        }
+    ]
+}
